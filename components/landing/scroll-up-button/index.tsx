@@ -7,11 +7,13 @@ import { IoIosArrowUp } from 'react-icons/io/';
 export const ScrollUpButton: React.FC = () => {
   let trigger = false;
 
-  trigger = useScrollTrigger({
-    target: window ? window : undefined,
-    disableHysteresis: true,
-    threshold: window.innerHeight * 0.5,
-  });
+  if (process.browser)
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    trigger = useScrollTrigger({
+      target: window ? window : undefined,
+      disableHysteresis: true,
+      threshold: window.innerHeight * 0.5,
+    });
 
   return (
     <Zoom in={trigger}>

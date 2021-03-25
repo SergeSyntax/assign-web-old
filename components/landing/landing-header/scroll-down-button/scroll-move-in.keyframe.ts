@@ -1,6 +1,6 @@
 import { keyframes } from '@emotion/react';
 
-export const scrollMoveInButton = keyframes`
+export const scrollMoveIn = keyframes`
   0% {
     opacity: 0;
 
