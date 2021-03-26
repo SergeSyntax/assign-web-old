@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test": "echo \"test\"",
     "share": "ngrok http 3000",
     "lint:eslint": "eslint ./ --fix",
     "lint:type": "tsc --project tsconfig.json --pretty --noEmit",
@@ -22,10 +23,12 @@
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.1.5",
     "@material-ui/core": "^4.11.3",
+    "formik": "^2.2.6",
     "next": "10.0.9",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-icons": "^4.2.0"
+    "react-icons": "^4.2.0",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.2.0",

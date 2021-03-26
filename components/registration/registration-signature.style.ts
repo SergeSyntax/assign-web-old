@@ -6,4 +6,5 @@ export const RegistrationSignature = styled(Signature)`
   color: #fff;
   font-size: 1.3rem;
   letter-spacing: 0.06rem;
+  margin-bottom: 2rem;
 `;

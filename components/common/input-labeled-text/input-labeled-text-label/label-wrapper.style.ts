@@ -1,9 +1,8 @@
-import { Theme } from '@material-ui/core';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
 export const LabelWrapper = styled.label`
-  ${({ theme }: { theme: Theme }) => css`
+  ${({ theme }) => css`
     text-transform: capitalize;
     display: flex;
     align-items: center;

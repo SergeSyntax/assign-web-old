@@ -5,15 +5,15 @@ import { LabelWrapper } from './label-wrapper.style';
 
 interface Props {
   htmlFor: string;
-  value: string;
+  name: string;
   icon: IconType;
 }
 
-export const Label: React.FC<Props> = ({ value, htmlFor, children, icon }) => {
+export const InputLabeledTextLabel: React.FC<Props> = ({ name, htmlFor, children, icon }) => {
   return (
     <LabelWrapper htmlFor={htmlFor}>
       <LabelIcon component={icon} />
-      <span>{value}</span>
+      <span>{name}</span>
       {children}
     </LabelWrapper>
   );
