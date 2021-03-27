@@ -15,7 +15,7 @@ interface Props extends LinkProps {
 
 const RouteLink = (props: React.PropsWithChildren<Props>): React.ReactElement => (
   <Link passHref {...props}>
-    <MaterialLinkStyled>{props.children}</MaterialLinkStyled>
+    <MaterialLinkStyled {...props}>{props.children}</MaterialLinkStyled>
   </Link>
 );
 

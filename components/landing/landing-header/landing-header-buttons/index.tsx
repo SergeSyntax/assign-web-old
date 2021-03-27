@@ -10,7 +10,7 @@ export const LandingHeaderButtons: React.FC = () => {
       <Link href="/registration" passHref>
         <LandingHeaderButtonsPrimary variant="contained">join now</LandingHeaderButtonsPrimary>
       </Link>
-      <Link href="#" passHref>
+      <Link href="/login" passHref>
         <LandingHeaderButtonsSecondary variant="outlined">sign in</LandingHeaderButtonsSecondary>
       </Link>
     </LandingHeaderButtonsWrapper>

@@ -11,7 +11,8 @@ export const LandingHeaderLogo = styled(Logo)`
       margin: 3rem;
 
       ${theme.breakpoints.down('xs')} {
-        font-size: 3rem;
+        margin-top: 5rem;
+        font-size: 5rem;
         align-self: center;
       }
     }

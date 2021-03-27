@@ -5,7 +5,7 @@ export const theme = responsiveFontSizes(
     typography: {
       fontFamily: ['Lato', 'sans-serif'].join(','),
       htmlFontSize: 10,
-      fontSize: 18,
+      fontSize: 16,
       h4: {
         fontSize: '5rem',
         letterSpacing: '.1rem',
