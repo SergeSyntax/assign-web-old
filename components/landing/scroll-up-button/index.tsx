@@ -5,7 +5,6 @@ import { Zoom } from '@material-ui/core';
 import { IoIosArrowUp } from 'react-icons/io/';
 
 export const ScrollUpButton: React.FC = () => {
-  const HALF_WINDOW_SIZE = window.innerHeight * 0.5;
   let trigger = false;
 
   if (process.browser)
@@ -13,7 +12,7 @@ export const ScrollUpButton: React.FC = () => {
     trigger = useScrollTrigger({
       target: window ? window : undefined,
       disableHysteresis: true,
-      threshold: HALF_WINDOW_SIZE,
+      threshold: window.innerHeight * 0.5,
     });
 
   return (
