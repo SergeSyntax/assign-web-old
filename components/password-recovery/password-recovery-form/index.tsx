@@ -4,10 +4,10 @@ import { MdMailOutline } from 'react-icons/md';
 import { InputLabeledText } from 'components/common/input-labeled-text/index';
 import PasswordRecoveryFormButtonWrapper from './password-recovery-form-button-wrapper.style';
 import Link from 'next/link';
-import { PasswordRecoveryApproveButton } from './password-recovery-form-approve-button.style';
-import { PasswordRecoveryCancelButton } from './password-recovery-form-cancel-button.style';
 import { PasswordRecoveryFormValues } from './password-recovery-form-values.interface';
 import { validationSchema } from './password-recovery-form-schema';
+import { PasswordRecoveryCancelButton } from './password-recovery-form-cancel-button.style';
+import { PasswordRecoveryApproveButton } from './password-recovery-form-approve-button.style';
 
 const PasswordRecoveryForm: React.FC = () => {
   return (

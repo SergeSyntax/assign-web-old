@@ -3,13 +3,20 @@ import styled from '@emotion/styled';
 import { Button } from '@material-ui/core';
 
 export const PasswordRecoveryCancelButton = styled(Button)`
-  flex: 1;
-  background: #318bd3;
-  padding: 1rem;
-  ${({ theme }) => css`
-    ${theme.breakpoints.down('xs')} {
-      flex: 1;
-      padding: 2rem;
-    }
-  `}
+  && {
+    margin-right: 1rem;
+
+    padding: 1rem 4rem;
+    color: #318bd3;
+    border-color: #318bd3;
+
+    ${({ theme }) => css`
+      ${theme.breakpoints.down('xs')} {
+        margin-right: unset;
+        flex: 1;
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+    `}
+  }
 `;
