@@ -5,4 +5,5 @@ export const RegistrationHeaderText = styled.p`
   color: #fff;
   font-weight: bold;
   letter-spacing: 0.05rem;
+  line-height: 1;
 `;
