@@ -5,4 +5,5 @@ export const LogoText = styled.h1`
   user-select: none;
   letter-spacing: 0.3rem;
   font-size: inherit;
+  line-height: 1;
 `;
