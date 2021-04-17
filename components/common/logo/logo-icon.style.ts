@@ -3,5 +3,5 @@ import { MdDashboard } from 'react-icons/md';
 
 export const LogoIcon = styled(MdDashboard)`
   margin-right: 0.3rem;
-  font-size: 0.9em;
+  font-size: 1.1em;
 `;
