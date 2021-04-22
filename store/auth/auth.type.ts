@@ -49,20 +49,8 @@ export interface authRegistrationAction {
   payload: authRegistrationPayload;
 }
 
-export interface authRegistrationSuccessAction {
-  type: UserActionType.AUTH_REGISTRATION_SUCCESS;
-  payload: UserData;
-}
-
-export interface authRegistrationErrorAction {
-  type: UserActionType.AUTH_REGISTRATION_FAILURE;
-  payload: string;
-}
-
 export type UserAction =
   | authLoginAction
   | UserLoginSuccessAction
   | UserLoginErrorAction
-  | authRegistrationAction
-  | authRegistrationSuccessAction
-  | authRegistrationErrorAction;
+  | authRegistrationAction;
