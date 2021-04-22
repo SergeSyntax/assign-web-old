@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { AppBarDashboard } from 'components/dashboard/header-dashboard';
-import { WrapperDashboard } from 'components/dashboard/wrapper-dashboard.style';
+import { DashboardHeader } from 'components/dashboard/dashboard-header';
+import { DashboardLayout } from 'components/dashboard/dashboard-layout.style';
 import { NextPage } from 'next';
 import React from 'react';
 
@@ -26,10 +26,10 @@ const ContentDashboard = styled.div`
 
 const NotFound: NextPage = () => {
   return (
-    <WrapperDashboard>
-      <AppBarDashboard />
+    <DashboardLayout>
+      <DashboardHeader />
       <ContentDashboard></ContentDashboard>
-    </WrapperDashboard>
+    </DashboardLayout>
   );
 };
 

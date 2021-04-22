@@ -6,11 +6,12 @@ import { Form, Formik } from 'formik';
 import { MdLockOutline, MdMailOutline } from 'react-icons/md';
 import { InputLabeledText } from 'components/common/input-labeled-text/index';
 import InputLabeledPassword from 'components/common/input-labeled-password';
+import { useDispatch } from 'react-redux';
+import { authLogin } from 'store/auth/auth.action';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().min(3).max(255).email().required(),
   password: Yup.string().min(5).max(255).required(),
-  name: Yup.string().min(1).max(255).required(),
 });
 
 interface FormValues {
@@ -24,15 +25,18 @@ const user: FormValues = {
 };
 
 const LoginDocumentForm: React.FC = () => {
+  const dispatch = useDispatch();
+  const onSubmit = (values: FormValues) => {
+    dispatch(authLogin(values));
+  };
+
   return (
     <Formik<FormValues>
       validationSchema={validationSchema}
       initialValues={user}
-      onSubmit={values => {
-        console.log(values);
-      }}
+      onSubmit={onSubmit}
     >
-      {({ isSubmitting }) => {
+      {() => {
         return (
           <Form autoComplete="off" noValidate>
             <InputLabeledText
@@ -46,9 +50,7 @@ const LoginDocumentForm: React.FC = () => {
               name="password"
               placeholder="i.e. example@!%$5475347"
             />
-            <AuthButton disabled={isSubmitting} type="submit">
-              Agree & Join
-            </AuthButton>
+            <AuthButton type="submit">Agree & Join</AuthButton>
           </Form>
         );
       }}

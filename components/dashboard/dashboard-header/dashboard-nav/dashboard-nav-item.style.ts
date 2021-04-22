@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { Tab } from '@material-ui/core';
 
-export const ItemNavHeaderDashboard = styled(Tab)`
+export const DashboardNavItem = styled(Tab)`
   font-size: 1.1rem;
   min-width: 10rem;
   min-height: unset;

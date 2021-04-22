@@ -6,6 +6,7 @@ import { CssBaseline, MuiThemeProvider } from '@material-ui/core';
 import { global } from '../styles/global';
 import { Global, ThemeProvider } from '@emotion/react';
 import { theme } from '../styles/theme';
+import { wrapper } from 'store';
 
 function MyApp({ Component, pageProps }: AppProps): ReactElement {
   React.useEffect(() => {
@@ -41,4 +42,4 @@ function MyApp({ Component, pageProps }: AppProps): ReactElement {
   );
 }
 
-export default MyApp;
+export default wrapper.withRedux(MyApp);
