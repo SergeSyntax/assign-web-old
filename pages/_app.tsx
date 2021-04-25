@@ -7,6 +7,7 @@ import { global } from '../styles/global';
 import { Global, ThemeProvider } from '@emotion/react';
 import { theme } from '../styles/theme';
 import { wrapper } from 'store';
+import ServerAlert from 'components/alert';
 
 function MyApp({ Component, pageProps }: AppProps): ReactElement {
   React.useEffect(() => {
@@ -35,6 +36,7 @@ function MyApp({ Component, pageProps }: AppProps): ReactElement {
           {/* Use also the ThemeProvider for Styled-Components so //you can access the theme in your own css */}
           <ThemeProvider theme={theme}>
             <Component {...pageProps} />
+            <ServerAlert />
           </ThemeProvider>
         </MuiThemeProvider>
       </StylesProvider>

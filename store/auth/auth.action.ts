@@ -2,11 +2,11 @@ import {
   UserActionType,
   authRegistrationAction,
   authRegistrationPayload,
-  UserLoginPayload,
-  authLoginAction,
+  loginPayload,
+  loginAction,
 } from './auth.type';
 
-export const authLogin = (payload: UserLoginPayload): authLoginAction => ({
+export const authLogin = (payload: loginPayload): loginAction => ({
   type: UserActionType.AUTH_LOGIN,
   payload,
 });

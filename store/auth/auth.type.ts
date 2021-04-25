@@ -1,4 +1,4 @@
-export interface UserLoginPayload {
+export interface loginPayload {
   email: string;
   password: string;
 }
@@ -29,28 +29,28 @@ export enum UserActionType {
   AUTH_FAILURE = 'auth/failure',
 }
 
-export interface authLoginAction {
-  type: UserActionType.AUTH_LOGIN;
-  payload: UserLoginPayload;
-}
-
-export interface UserLoginSuccessAction {
-  type: UserActionType.AUTH_SUCCESS;
-  payload: UserData;
-}
-
-export interface UserLoginErrorAction {
-  type: UserActionType.AUTH_FAILURE;
-  payload: string;
-}
-
 export interface authRegistrationAction {
   type: UserActionType.AUTH_REGISTRATION;
   payload: authRegistrationPayload;
 }
 
+export interface loginAction {
+  type: UserActionType.AUTH_LOGIN;
+  payload: loginPayload;
+}
+
+export interface authSuccessAction {
+  type: UserActionType.AUTH_SUCCESS;
+  payload: UserData;
+}
+
+export interface authFailureAction {
+  type: UserActionType.AUTH_FAILURE;
+  payload: string;
+}
+
 export type UserAction =
-  | authLoginAction
-  | UserLoginSuccessAction
-  | UserLoginErrorAction
+  | loginAction
+  | authSuccessAction
+  | authFailureAction
   | authRegistrationAction;

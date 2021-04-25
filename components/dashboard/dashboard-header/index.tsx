@@ -9,7 +9,7 @@ import { InputBase, Paper } from '@material-ui/core';
 import { FiSearch } from 'react-icons/fi';
 import styled from '@emotion/styled';
 import { grey } from '@material-ui/core/colors';
-import { CreateButton } from './create-button';
+import { Create } from './create';
 import { css } from '@emotion/react';
 
 const DashboardSearchLayout = styled(Paper)`
@@ -67,7 +67,7 @@ export const DashboardHeader: React.FC = () => {
           />
         </DashboardSearchLayout>
         <DashboardNav />
-        <CreateButton />
+        <Create />
         <UserOptions />
       </DashboardHeaderToolbar>
     </HeaderDashboardWrapper>

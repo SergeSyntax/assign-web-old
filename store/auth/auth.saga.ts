@@ -1,8 +1,9 @@
 import { AxiosResponse } from 'axios';
 import { fork, call, takeLatest, put } from 'redux-saga/effects';
 import { authLoginRequest as userLoginRequest, authRegistrationRequest } from './auth.api';
-import { authLoginAction, authRegistrationAction, UserActionType, UserData } from './auth.type';
+import { loginAction, authRegistrationAction, UserActionType, UserData } from './auth.type';
 import Router from 'next/router';
+import { AlertActionType } from 'store/alert/alert.type';
 
 function* authFlowSuccess(payload: UserData) {
   yield put({
@@ -14,16 +15,12 @@ function* authFlowSuccess(payload: UserData) {
 }
 
 function* authFlowFailure(err: Error) {
-  yield call(console.log, err.message);
-  // yield console.log(err);
-  // yield put({ type: AUTH_FAILURE });
-  // yield put(requestAlert(err));
+  yield put({ type: UserActionType.AUTH_FAILURE, payload: err });
+  yield put({ type: AlertActionType.ALERT_REQUEST, payload: err });
 }
 
-function* useLogin({ payload }: authLoginAction) {
+function* useLogin({ payload }: loginAction) {
   try {
-    console.log('happen');
-
     const { data } = yield call(userLoginRequest, payload);
     yield call(authFlowSuccess, data);
   } catch (err) {

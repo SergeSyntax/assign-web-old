@@ -7,8 +7,7 @@ import { Form, Formik } from 'formik';
 import { MdLockOutline, MdMailOutline, MdPersonOutline } from 'react-icons/md';
 import { InputLabeledText } from 'components/common/input-labeled-text/index';
 import InputLabeledPassword from 'components/common/input-labeled-password';
-import { useDispatch } from 'react-redux';
-import { authRegistration } from 'store/auth/auth.action';
+import { useActions } from 'store/hooks';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().min(3).max(255).email().required(),
@@ -29,9 +28,9 @@ const user: FormValues = {
 };
 
 const RegistrationDocumentForm: React.FC = () => {
-  const dispatch = useDispatch();
+  const { authRegistration } = useActions();
   const onSubmit = (values: FormValues) => {
-    dispatch(authRegistration(values));
+    authRegistration(values);
   };
 
   return (
