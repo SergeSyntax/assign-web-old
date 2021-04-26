@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
-export const InputLabeledPasswordLabelWrapper = styled.label`
+export const PasswordLabelWrapper = styled.label`
   ${({ theme }) => css`
     text-transform: capitalize;
     display: flex;

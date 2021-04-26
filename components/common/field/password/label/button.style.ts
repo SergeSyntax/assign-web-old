@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { IconButton } from '@material-ui/core';
 
-export const InputLabeledPasswordLabelButton = styled(IconButton)`
+export const PasswordLabelButton = styled(IconButton)`
   font-size: 1.9rem;
   color: #303030;
   font-weight: bold;

@@ -4,10 +4,10 @@ import * as Yup from 'yup';
 
 import { Form, Formik } from 'formik';
 import { MdLockOutline, MdMailOutline } from 'react-icons/md';
-import { InputLabeledText } from 'components/common/input-labeled-text/index';
-import InputLabeledPassword from 'components/common/input-labeled-password';
+import PasswordField from 'components/common/field/password';
 import { useDispatch } from 'react-redux';
 import { authLogin } from 'store/auth/auth.action';
+import { LabeledTextField } from 'components/common/field/text-labled';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().min(3).max(255).email().required(),
@@ -39,13 +39,13 @@ const LoginDocumentForm: React.FC = () => {
       {() => {
         return (
           <Form autoComplete="off" noValidate>
-            <InputLabeledText
+            <LabeledTextField
               icon={MdMailOutline}
               name="email"
               type="email"
               placeholder="i.e. example@example.com"
             />
-            <InputLabeledPassword
+            <PasswordField
               icon={MdLockOutline}
               name="password"
               placeholder="i.e. example@!%$5475347"

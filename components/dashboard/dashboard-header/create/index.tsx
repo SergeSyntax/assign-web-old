@@ -1,17 +1,17 @@
 import styled from '@emotion/styled';
 import { Menu, MenuItem } from '@material-ui/core';
 import React, { Fragment } from 'react';
-import { BiLayerPlus } from 'react-icons/bi';
 import { AiOutlineUsergroupAdd } from 'react-icons/ai';
 import { RiMailSendLine } from 'react-icons/ri';
 import { grey } from '@material-ui/core/colors';
-import useDropdown from 'components/common/common/dropdown.hoot';
+import useDropdown from 'components/common/dropdown.hook';
 import { CreateButton } from './create-button';
+import CreateProject from './create-project';
 
 const CreateDropdown = styled(Menu)`
   & .MuiPaper-root.MuiPopover-paper.MuiPopover-paper {
     min-width: 22rem;
-    top: 6.1rem !important;
+    top: 6.2rem !important;
   }
   & .MuiMenuItem-root {
     opacity: 0.9;
@@ -39,18 +39,12 @@ export const Create: React.FC = () => {
         keepMounted
         open={Boolean(dropdown)}
         onClose={closeDropdown}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'right',
-        }}
         transformOrigin={{
           vertical: 'top',
-          horizontal: 'right',
+          horizontal: 'center',
         }}
       >
-        <MenuItem>
-          <BiLayerPlus /> New Project
-        </MenuItem>
+        <CreateProject onClick={closeDropdown} />
         <MenuItem>
           {' '}
           <AiOutlineUsergroupAdd />

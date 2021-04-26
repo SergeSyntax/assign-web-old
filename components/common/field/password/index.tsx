@@ -1,10 +1,10 @@
 import { Field } from 'formik';
 import React, { Fragment, useState } from 'react';
-import { InputLabeledPasswordLabel } from './input-labeled-password-label';
-import { TextInput } from '../text-input';
+import { PasswordLabel } from './label';
+import { TextField } from '../text/material';
 import { IconType } from 'react-icons/lib';
 
-export interface InputLabeledPasswordProps {
+export interface PasswordFieldProps {
   icon: IconType;
   name: string;
   placeholder: string;
@@ -12,26 +12,21 @@ export interface InputLabeledPasswordProps {
   helperText?: string;
 }
 
-const InputLabeledPassword: React.FC<InputLabeledPasswordProps> = ({
-  icon,
-  name,
-  label,
-  ...rest
-}) => {
+const PasswordField: React.FC<PasswordFieldProps> = ({ icon, name, label, ...rest }) => {
   const [isHidden, setIsHidden] = useState(true);
 
   return (
     <Fragment>
-      <InputLabeledPasswordLabel
+      <PasswordLabel
         icon={icon}
         htmlFor={label ? label : name}
         name={name}
         isHidden={isHidden}
         setIsHidden={() => setIsHidden(prevValue => !prevValue)}
       />
-      <Field {...rest} name={name} type={isHidden ? 'password' : 'text'} component={TextInput} />
+      <Field {...rest} name={name} type={isHidden ? 'password' : 'text'} component={TextField} />
     </Fragment>
   );
 };
 
-export default InputLabeledPassword;
+export default PasswordField;

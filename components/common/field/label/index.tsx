@@ -9,7 +9,7 @@ interface Props {
   icon: IconType;
 }
 
-export const InputLabeledTextLabel: React.FC<Props> = ({ name, htmlFor, children, icon }) => {
+export const Label: React.FC<Props> = ({ name, htmlFor, children, icon }) => {
   return (
     <LabelWrapper htmlFor={htmlFor}>
       <LabelIcon component={icon} />

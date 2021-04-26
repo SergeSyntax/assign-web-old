@@ -5,9 +5,9 @@ import * as Yup from 'yup';
 import { Form, Formik } from 'formik';
 
 import { MdLockOutline, MdMailOutline, MdPersonOutline } from 'react-icons/md';
-import { InputLabeledText } from 'components/common/input-labeled-text/index';
-import InputLabeledPassword from 'components/common/input-labeled-password';
-import { useActions } from 'store/hooks';
+import { LabeledTextField } from 'components/common/field/text-labled/index';
+import PasswordField from 'components/common/field/password';
+import { useActions } from 'store/store-hooks';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().min(3).max(255).email().required(),
@@ -42,19 +42,19 @@ const RegistrationDocumentForm: React.FC = () => {
       {() => {
         return (
           <Form autoComplete="off" noValidate>
-            <InputLabeledText
+            <LabeledTextField
               icon={MdPersonOutline}
               name="name"
               type="text"
               placeholder="i.e. Steve Rozmarin"
             />
-            <InputLabeledText
+            <LabeledTextField
               icon={MdMailOutline}
               name="email"
               type="email"
               placeholder="i.e. example@example.com"
             />
-            <InputLabeledPassword
+            <PasswordField
               icon={MdLockOutline}
               name="password"
               placeholder="i.e. example@!%$5475347"

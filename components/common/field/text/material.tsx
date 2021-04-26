@@ -1,14 +1,14 @@
-import { TextField } from './text-field.style';
+import { TextFieldMaterial } from './text-field.style';
 import { FieldProps, getIn } from 'formik';
 
-export const TextInput: React.FC<FieldProps<string>> = props => {
+export const TextField: React.FC<FieldProps<string>> = props => {
   const { field, form, ...rest } = props;
   const { name } = field;
   const isError = getIn(form.errors, name) && getIn(form.touched, name);
   const getErrorMessage = getIn(form.errors, name);
 
   return (
-    <TextField
+    <TextFieldMaterial
       {...field}
       {...rest}
       variant="outlined"

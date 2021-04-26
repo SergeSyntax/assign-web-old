@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Formik } from 'formik';
 import { MdMailOutline } from 'react-icons/md';
-import { InputLabeledText } from 'components/common/input-labeled-text/index';
+import { LabeledTextField } from 'components/common/field/text-labled/index';
 import PasswordRecoveryFormButtonWrapper from './password-recovery-form-button-wrapper.style';
 import Link from 'next/link';
 import { PasswordRecoveryFormValues } from './password-recovery-form-values.interface';
@@ -21,7 +21,7 @@ const PasswordRecoveryForm: React.FC = () => {
       {({ isSubmitting }) => {
         return (
           <Form autoComplete="off" noValidate>
-            <InputLabeledText
+            <LabeledTextField
               icon={MdMailOutline}
               name="email"
               type="email"

@@ -6,17 +6,15 @@ import {
   IconButton,
 } from '@material-ui/core';
 import { GoX } from 'react-icons/go';
-import { useActions, useStoreState } from 'store/hooks';
+import { useActions, useSelector } from 'store/store-hooks';
 
 type HandleClose = (event: React.SyntheticEvent<unknown>, reason?: SnackbarCloseReason) => void;
 
 const ServerAlert: React.FC = () => {
   const { clearAlert } = useActions();
-  const message = useStoreState(state => state.alert.message);
-  const relevant = useStoreState(state => state.alert.relevant);
-  const error = useStoreState(state => state.alert.error);
+  const { message, relevant, error } = useSelector(state => state.alert);
 
-  const handleClose: HandleClose = (event, reason) => {
+  const handleClose: HandleClose = (_event, reason) => {
     if (reason && reason === 'clickaway') return;
     clearAlert();
   };
