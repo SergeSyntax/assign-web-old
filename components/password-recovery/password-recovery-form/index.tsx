@@ -1,13 +1,13 @@
 import React from 'react';
 import { Form, Formik } from 'formik';
 import { MdMailOutline } from 'react-icons/md';
-import { LabeledTextField } from 'components/common/field/text-labled/index';
 import PasswordRecoveryFormButtonWrapper from './password-recovery-form-button-wrapper.style';
 import Link from 'next/link';
 import { PasswordRecoveryFormValues } from './password-recovery-form-values.interface';
 import { validationSchema } from './password-recovery-form-schema';
 import { PasswordRecoveryCancelButton } from './password-recovery-form-cancel-button.style';
 import { PasswordRecoveryApproveButton } from './password-recovery-form-approve-button.style';
+import { LabeledTextField } from 'components/common/field/text-labled';
 
 const PasswordRecoveryForm: React.FC = () => {
   return (

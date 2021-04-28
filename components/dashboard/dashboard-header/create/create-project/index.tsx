@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import {
-  Button,
   Dialog,
   DialogActions,
   DialogContent,
@@ -9,6 +8,10 @@ import {
   MenuItem,
   Typography,
 } from '@material-ui/core';
+
+import SubmitButton from 'components/common/button/submit';
+import { TextButton } from 'components/common/button/text';
+import { SelectValue } from 'components/common/field/select';
 import { LabeledSelectField } from 'components/common/field/select-labled';
 import { LabeledTextField } from 'components/common/field/text-labled';
 import { Form, Formik } from 'formik';
@@ -46,18 +49,24 @@ const CloseButton = styled(IconButton)`
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().min(1).max(255).required(),
-  accessibility: Yup.boolean().required(),
+  accessibility: Yup.string().required().oneOf(['private', 'public', 'team']),
 });
 
 interface FormValues {
   title: string;
-  accessibility: boolean;
+  accessibility: string;
 }
 
 const user: FormValues = {
   title: '',
-  accessibility: false,
+  accessibility: 'public',
 };
+
+const values: SelectValue[] = [
+  { key: 'private', value: 'private' },
+  { key: 'public', value: 'public' },
+  { key: 'team', value: 'team' },
+];
 
 const CreateProject: ForwardRefRenderFunction<Element, Props> = ({ onClick }, ref) => {
   const [open, setOpen] = React.useState(false);
@@ -70,13 +79,25 @@ const CreateProject: ForwardRefRenderFunction<Element, Props> = ({ onClick }, re
   const handleClose = () => {
     setOpen(false);
   };
+
+  const handleTabPropagation: React.KeyboardEventHandler<HTMLDivElement> | undefined = event => {
+    if (event.key === 'Tab') {
+      event.stopPropagation();
+    }
+  };
+
   return (
     <Fragment>
       <MenuItem innerRef={ref} onClick={handleClickOpen}>
         <BiLayerPlus /> New Project
       </MenuItem>
 
-      <DialogWrapper onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
+      <DialogWrapper
+        onClose={handleClose}
+        aria-labelledby="customized-dialog-title"
+        open={open}
+        onKeyDown={handleTabPropagation}
+      >
         <DialogHeader disableTypography>
           <Typography variant="h6">Create Project</Typography>
           <CloseButton aria-label="close" onClick={handleClose}>
@@ -98,16 +119,16 @@ const CreateProject: ForwardRefRenderFunction<Element, Props> = ({ onClick }, re
                     type="text"
                     placeholder="i.e. SkyNet Project"
                   />
-                  <LabeledSelectField icon={TiTag} name="accessibility" />
+                  <LabeledSelectField icon={TiTag} name="accessibility" values={values} />
                 </Form>
               );
             }}
           </Formik>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            Save changes
-          </Button>
+          <TextButton onClick={handleClose}>cancel</TextButton>
+
+          <SubmitButton inProgress={false} text="create" />
         </DialogActions>
       </DialogWrapper>
     </Fragment>

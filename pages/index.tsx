@@ -1,3 +1,4 @@
+import React from 'react';
 import { About } from 'components/landing/about';
 import { Features } from 'components/landing/features';
 import { Footer } from 'components/landing/footer';

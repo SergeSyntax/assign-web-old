@@ -1,13 +1,11 @@
-import AuthButton from 'components/common/auth-button.style';
 import React from 'react';
 import * as Yup from 'yup';
-
 import { Form, Formik } from 'formik';
-
 import { MdLockOutline, MdMailOutline, MdPersonOutline } from 'react-icons/md';
-import { LabeledTextField } from 'components/common/field/text-labled/index';
 import PasswordField from 'components/common/field/password';
-import { useActions } from 'store/store-hooks';
+import { useActions, useSelector } from 'store/store-hooks';
+import { LabeledTextField } from 'components/common/field/text-labled';
+import SubmitButtonWide from 'components/common/button/submit-wide';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().min(3).max(255).email().required(),
@@ -28,6 +26,7 @@ const user: FormValues = {
 };
 
 const RegistrationDocumentForm: React.FC = () => {
+  const isLoading = useSelector(state => state.auth.loading);
   const { authRegistration } = useActions();
   const onSubmit = (values: FormValues) => {
     authRegistration(values);
@@ -59,7 +58,7 @@ const RegistrationDocumentForm: React.FC = () => {
               name="password"
               placeholder="i.e. example@!%$5475347"
             />
-            <AuthButton type="submit">Agree & Join</AuthButton>
+            <SubmitButtonWide inProgress={isLoading} type="submit" text="Agree & Join" />
           </Form>
         );
       }}

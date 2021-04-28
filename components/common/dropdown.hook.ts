@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
-type UseDropdown = [Element | null, React.MouseEventHandler<HTMLButtonElement>, () => void];
+interface UseDropdown {
+  dropdown: Element | null;
+  openDropdown: React.MouseEventHandler<HTMLButtonElement>;
+  closeDropdown: () => void;
+}
 
 const useDropdown = (initialState: Element | null): UseDropdown => {
   const [dropdown, setAnchorElement] = useState<Element | null>(initialState);
@@ -13,7 +17,7 @@ const useDropdown = (initialState: Element | null): UseDropdown => {
     setAnchorElement(null);
   };
 
-  return [dropdown, openDropdown, closeDropdown];
+  return { dropdown, openDropdown, closeDropdown };
 };
 
 export default useDropdown;

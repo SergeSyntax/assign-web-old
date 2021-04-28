@@ -6,12 +6,11 @@ import Router from 'next/router';
 import { AlertActionType } from 'store/alert/alert.type';
 
 function* authFlowSuccess(payload: UserData) {
+  yield call(Router.push, '/dashboard');
   yield put({
     type: UserActionType.AUTH_SUCCESS,
     payload,
   });
-
-  yield call(Router.push, '/dashboard');
 }
 
 function* authFlowFailure(err: Error) {

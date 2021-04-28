@@ -1,3 +1,4 @@
+import React from 'react';
 import { PasswordRecoveryContent } from 'components/password-recovery/password-recovery-content.style';
 import PasswordRecoveryForm from 'components/password-recovery/password-recovery-form';
 import { PasswordRecoveryFormWrapper } from 'components/password-recovery/password-recovery-form/password-recovery-form-wrapper.style';

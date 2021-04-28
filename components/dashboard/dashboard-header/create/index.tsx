@@ -27,7 +27,7 @@ const CreateDropdown = styled(Menu)`
 `;
 
 export const Create: React.FC = () => {
-  const [dropdown, openDropdown, closeDropdown] = useDropdown(null);
+  const { dropdown, openDropdown, closeDropdown } = useDropdown(null);
 
   return (
     <Fragment>
