@@ -12,7 +12,9 @@
     "lint:type": "tsc --project tsconfig.json --pretty --noEmit",
     "lint": "npm-run-all lint:*",
     "postinstall": "husky install",
-    "mock-api": "ts-node -O '{\"module\": \"commonjs\"}' ./helpers/server.ts"
+    "mock-api2": "ts-node -O '{\"module\": \"commonjs\"}' ./helpers/server.ts",
+    "predev:start-mock-api": "node helpers/generateMockData",
+    "dev:start-mock-api": "json-server --watch helpers/db.json --port 5000 -m ./node_modules/json-server-auth"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -26,6 +28,7 @@
     "@material-ui/lab": "^4.0.0-alpha.57",
     "agentkeepalive": "^4.1.4",
     "axios": "^0.21.1",
+    "chalk": "^4.1.1",
     "cookies": "^0.8.0",
     "express-http-proxy": "^1.6.2",
     "formik": "^2.2.6",
@@ -73,6 +76,6 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
     "ts-node": "^9.1.1",
-    "typescript": "^4.2.3"
+    "typescript": "^4.3.2"
   }
 }

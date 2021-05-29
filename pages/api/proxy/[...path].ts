@@ -16,8 +16,8 @@ export default (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
   const cookies = new Cookies(req, res);
 
   const authToken = cookies.get('auth-token');
-
   req.headers.cookie = '';
+
   if (authToken) {
     req.headers.authorization = authToken;
   }
