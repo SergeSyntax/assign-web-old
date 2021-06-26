@@ -6,7 +6,7 @@ const path = require('path');
 const chalk = require('chalk');
 const faker = require('faker');
 
-extend('faker', () => faker)
+extend('faker', () => faker);
 const data = JSON.stringify(generate(schema), 3);
 
 console.log(JSON.stringify(generate(schema), null, 3));

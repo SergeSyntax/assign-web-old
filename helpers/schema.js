@@ -9,7 +9,7 @@ module.exports = {
         type: 'object',
         properties: {
           id: {
-            type:'string',
+            type: 'string',
             faker: 'datatype.uuid',
           },
           firstName: {
