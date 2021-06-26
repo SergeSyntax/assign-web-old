@@ -1,6 +1,6 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const LogoText = styled.h1`
+export const LogoText = styled('h1')`
   font-family: 'Permanent Marker';
   user-select: none;
   letter-spacing: 0.3rem;

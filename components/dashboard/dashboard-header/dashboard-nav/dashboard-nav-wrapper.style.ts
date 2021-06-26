@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 import { Tabs } from '@material-ui/core';
 
 export const WrapperNavHeaderDashboard = styled(Tabs)`

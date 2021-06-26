@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const FooterMenuItemWrapper = styled.li`
+export const FooterMenuItemWrapper = styled('li')`
   ${({ theme }) => css`
     &:not(:last-child) {
       margin-right: 5rem;

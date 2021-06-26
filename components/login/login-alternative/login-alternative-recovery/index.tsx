@@ -1,8 +1,8 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 import React from 'react';
 import { LoginAlternativeLink } from '../login-alternative-link';
 
-const LoginAlternativeRecoveryWrapper = styled.p`
+const LoginAlternativeRecoveryWrapper = styled('p')`
   font-size: 1.5rem;
 
   font-weight: bold;

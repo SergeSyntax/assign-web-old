@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const RubricParagraph = styled.p`
+export const RubricParagraph = styled('p')`
   ${({ theme }) => css`
     font-size: 1.6rem;
     line-height: 1.7;

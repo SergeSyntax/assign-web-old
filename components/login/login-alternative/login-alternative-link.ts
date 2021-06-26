@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 import RouteLink from 'components/common/route-link';
 
 export const LoginAlternativeLink = styled(RouteLink)`

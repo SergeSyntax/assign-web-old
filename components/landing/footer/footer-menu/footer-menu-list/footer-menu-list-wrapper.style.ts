@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const FooterMenuListWrapper = styled.ul`
+export const FooterMenuListWrapper = styled('ul')`
   ${({ theme }) => css`
     list-style: none;
     display: flex;

@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const FeatureWrapper = styled.div`
+export const FeatureWrapper = styled('div')`
   ${({ theme }) => css`
     box-shadow: 0 1.5rem 4rem rgba(#000, 0.15);
     height: 40rem;

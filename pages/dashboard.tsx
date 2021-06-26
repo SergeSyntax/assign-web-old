@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 import { DashboardHeader } from 'components/dashboard/dashboard-header';
 import { DashboardLayout } from 'components/dashboard/dashboard-layout.style';
 import { NextPage } from 'next';
@@ -15,11 +15,11 @@ import React from 'react';
 //   padding: 3rem;
 // `;
 
-// const SideBarDashboard = styled.div`
+// const SideBarDashboard = styled('div')`
 //   background: #fff;
 // `;
 
-const ContentDashboard = styled.div`
+const ContentDashboard = styled('div')`
   background: #fff;
   flex: 1;
 `;

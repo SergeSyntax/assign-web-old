@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 import { Container } from '@material-ui/core';
 
 const LoginDocumentWrapper = styled(Container)`

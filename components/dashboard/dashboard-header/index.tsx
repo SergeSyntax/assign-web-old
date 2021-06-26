@@ -7,7 +7,7 @@ import { DashboardHeaderToolbar } from './dashboard-header-toolbar.style';
 import { UserOptions } from './UserOptions';
 import { InputBase, Paper } from '@material-ui/core';
 import { FiSearch } from 'react-icons/fi';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 import { grey } from '@material-ui/core/colors';
 import { Create } from './create';
 import { css } from '@emotion/react';

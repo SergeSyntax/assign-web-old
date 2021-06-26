@@ -1,7 +1,7 @@
-import { createMuiTheme, responsiveFontSizes } from '@material-ui/core';
+import { createTheme, responsiveFontSizes } from '@material-ui/core/styles';
 
 export const theme = responsiveFontSizes(
-  createMuiTheme({
+  createTheme({
     typography: {
       fontFamily: ['Lato', 'sans-serif'].join(','),
       htmlFontSize: 10,
@@ -21,10 +21,10 @@ export const theme = responsiveFontSizes(
         textTransform: 'capitalize',
       },
     },
-    overrides: {
+    components: {
       MuiBackdrop: {
-        root: {
-          backgroundColor: 'rgba(9, 30, 66, 0.54)',
+        styleOverrides: {
+          root: { backgroundColor: 'rgba(9, 30, 66, 0.54)' },
         },
       },
     },

@@ -1,6 +1,6 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const PasswordRecoveryWrapper = styled.div`
+export const PasswordRecoveryWrapper = styled('div')`
   min-height: 100vh;
   display: flex;
   flex-direction: column;

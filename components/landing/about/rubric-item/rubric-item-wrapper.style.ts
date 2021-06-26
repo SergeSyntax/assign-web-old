@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const RubricWrapper = styled.div`
+export const RubricWrapper = styled('div')`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;

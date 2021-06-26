@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 import SubmitButtonWide from '../button/submit-wide';
 
 export const OpenAuthGoogle = styled(SubmitButtonWide)`

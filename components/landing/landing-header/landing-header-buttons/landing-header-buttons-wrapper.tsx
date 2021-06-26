@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const LandingHeaderButtonsWrapper = styled.div`
+export const LandingHeaderButtonsWrapper = styled('div')`
   ${({ theme }) => css`
     display: flex;
     justify-content: center;

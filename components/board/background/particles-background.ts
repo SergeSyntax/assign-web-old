@@ -1,5 +1,5 @@
 import Particles from 'react-tsparticles';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
 export const ParticlesBackground = styled(Particles)`
   background: radial-gradient(#89f7fe, #66a6ff) #66a6ff;

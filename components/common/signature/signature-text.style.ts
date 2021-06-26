@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const SignatureText = styled.p`
+export const SignatureText = styled('p')`
   ${({ theme }) => css`
     color: #cfcfcf;
     font-weight: 900;

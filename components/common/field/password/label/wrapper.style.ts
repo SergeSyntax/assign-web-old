@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const PasswordLabelWrapper = styled.label`
+export const PasswordLabelWrapper = styled('label')`
   ${({ theme }) => css`
     text-transform: capitalize;
     display: flex;
@@ -9,6 +9,6 @@ export const PasswordLabelWrapper = styled.label`
     justify-content: flex-start;
     font-size: 2rem;
     padding: 0.5rem;
-    color: ${theme.palette.grey.A400};
+    color: ${theme.palette.grey[600]};
   `}
 `;

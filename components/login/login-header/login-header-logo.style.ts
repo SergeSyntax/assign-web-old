@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 import { Logo } from 'components/common/logo';
 
 export const LoginHeaderLogo = styled(Logo)`

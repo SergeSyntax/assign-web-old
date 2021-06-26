@@ -1,6 +1,6 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const LoginHeaderWrapper = styled.div`
+export const LoginHeaderWrapper = styled('div')`
   font-size: 2rem;
   text-align: center;
   margin-top: 0.8rem;

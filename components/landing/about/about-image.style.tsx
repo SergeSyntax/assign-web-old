@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-const AboutImage = styled.img`
+const AboutImage = styled('img')`
   ${({ theme }) => css`
     flex: 1;
     max-width: 50rem;

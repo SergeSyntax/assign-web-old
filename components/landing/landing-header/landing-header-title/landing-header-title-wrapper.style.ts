@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const LandingHeaderTitleWrapper = styled.h1`
+export const LandingHeaderTitleWrapper = styled('h1')`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;

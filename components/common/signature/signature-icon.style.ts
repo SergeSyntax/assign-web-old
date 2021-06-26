@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 import { SiPolymerproject } from 'react-icons/si';
 
 export const SignatureIcon = styled(SiPolymerproject)`

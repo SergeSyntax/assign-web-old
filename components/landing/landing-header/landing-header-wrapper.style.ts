@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const LandingHeaderWrapper = styled.header`
+export const LandingHeaderWrapper = styled('header')`
   min-height: 100vh;
   position: relative;
   display: flex;

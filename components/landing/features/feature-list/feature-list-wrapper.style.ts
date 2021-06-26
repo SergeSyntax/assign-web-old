@@ -1,6 +1,6 @@
 import { Container } from '@material-ui/core';
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 export const FeatureListWrapper = styled(Container)`
   ${({ theme }) => css`
     display: flex;

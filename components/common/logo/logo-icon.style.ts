@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 import { MdDashboard } from 'react-icons/md';
 
 export const LogoIcon = styled(MdDashboard)`

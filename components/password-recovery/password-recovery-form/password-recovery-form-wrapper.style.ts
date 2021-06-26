@@ -1,6 +1,6 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const PasswordRecoveryFormWrapper = styled.div`
+export const PasswordRecoveryFormWrapper = styled('div')`
   && {
     margin-top: 2rem;
     max-width: 46rem;

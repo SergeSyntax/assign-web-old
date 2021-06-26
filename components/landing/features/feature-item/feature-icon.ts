@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 import { IconType } from 'react-icons/lib';
 
 interface Props {

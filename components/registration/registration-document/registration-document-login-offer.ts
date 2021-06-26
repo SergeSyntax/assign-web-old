@@ -1,6 +1,6 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const RegistrationDocumentLoginOffer = styled.p`
+export const RegistrationDocumentLoginOffer = styled('p')`
   text-align: center;
   text-transform: capitalize;
   font-size: 1.5rem;

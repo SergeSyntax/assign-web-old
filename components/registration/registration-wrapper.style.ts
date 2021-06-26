@@ -1,6 +1,6 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const RegistrationWrapper = styled.div`
+export const RegistrationWrapper = styled('div')`
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -1,9 +1,9 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 import { NextPage } from 'next';
 import React from 'react';
 import { IoIosArrowBack } from 'react-icons/io';
 
-const NotFoundWrapper = styled.div`
+const NotFoundWrapper = styled('div')`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -12,7 +12,7 @@ const NotFoundWrapper = styled.div`
   height: 100vh;
 `;
 
-const NotFoundStatus = styled.p`
+const NotFoundStatus = styled('p')`
   font-size: 20rem;
   padding: 2rem;
   border-right: solid black 3px;
@@ -21,19 +21,19 @@ const NotFoundStatus = styled.p`
   user-select: none;
 `;
 
-const NotFoundTextWrapper = styled.div`
+const NotFoundTextWrapper = styled('div')`
   padding: 1.5rem;
   font-size: 1.7rem;
 `;
 
-const NotFoundHeader = styled.h1`
+const NotFoundHeader = styled('h1')`
   font-size: 2em;
   text-transform: uppercase;
   cursor: default;
   user-select: none;
 `;
 
-const NotFoundParagraph = styled.p`
+const NotFoundParagraph = styled('p')`
   font-size: 1.2em;
   text-transform: capitalize;
   font-weight: bold;
@@ -41,7 +41,7 @@ const NotFoundParagraph = styled.p`
   user-select: none;
 `;
 
-const NotFoundLinkBack = styled.a`
+const NotFoundLinkBack = styled('a')`
   display: inline-flex;
   align-items: center;
   margin-top: 2rem;

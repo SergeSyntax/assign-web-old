@@ -1,6 +1,6 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const FeaturesVideoBackground = styled.video`
+export const FeaturesVideoBackground = styled('video')`
   position: absolute;
   top: 0;
   left: 0;

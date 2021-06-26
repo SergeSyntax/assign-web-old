@@ -1,6 +1,6 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const PasswordRecoveryHeading = styled.div`
+export const PasswordRecoveryHeading = styled('div')`
   && {
     font-size: 3rem;
     font-weight: 400;

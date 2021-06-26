@@ -1,1 +1,25 @@
-{"users":[{"email":"id dolore","password":"ut occaecat","firstName":"qui","lastName":"irure","id":81754210},{"email":"anim deserunt magna nisi non","firstName":"mollit","lastName":"culpa","id":74107006,"password":"voluptate ex fugiat aliquip"},{"email":"voluptate","lastName":"nulla"},{"email":"esse ut Lorem quis","password":"in","firstName":"elit ex","id":22799568,"lastName":"dolor nostrud"}]}
+{
+    "users": [
+        {
+            "email": "Henri74@gmail.com"
+        },
+        {
+            "email": "Lauren11@gmail.com",
+            "id": "3e843827-babf-41d7-81da-0051f593450c"
+        },
+        {
+            "email": "Minerva53@yahoo.com",
+            "password": "U96cxreRd7TXfJn"
+        },
+        {
+            "email": "Margaret_Treutel@yahoo.com",
+            "firstName": "Tyler",
+            "password": "CqnqLIsAFzT1EsC",
+            "id": "bc7af095-a902-466b-bb00-d4bffa8daea0",
+            "lastName": "Rempel"
+        },
+        {
+            "email": "Joshua_Crona@hotmail.com"
+        }
+    ]
+}

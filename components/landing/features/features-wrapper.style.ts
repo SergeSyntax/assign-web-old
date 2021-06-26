@@ -1,6 +1,6 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const FeaturesWrapper = styled.section`
+export const FeaturesWrapper = styled('section')`
   background-color: rgba(255, 255, 255, 0.6);
   position: relative;
   display: flex;

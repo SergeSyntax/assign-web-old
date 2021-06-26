@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 import { Avatar, Button, ListItemIcon, Menu, MenuItem } from '@material-ui/core';
 import { grey } from '@material-ui/core/colors';
 import React, { Fragment, useState } from 'react';

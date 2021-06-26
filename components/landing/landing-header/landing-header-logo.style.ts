@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 import { Logo } from 'components/common/logo';
 import { moveInLeft } from 'styles/animations/move-in-left.keyframe';
 

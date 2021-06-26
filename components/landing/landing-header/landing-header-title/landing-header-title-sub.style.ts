@@ -1,8 +1,8 @@
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 import { moveInRight } from 'styles/animations/move-in-right.keyframe';
 
-export const LandingHeaderTitleSub = styled.span`
+export const LandingHeaderTitleSub = styled('span')`
   ${({ theme }) => css`
     display: inline-block;
     letter-spacing: 1.05em;

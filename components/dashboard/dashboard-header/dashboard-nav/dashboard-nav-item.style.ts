@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 import { Tab } from '@material-ui/core';
 
 export const DashboardNavItem = styled(Tab)`

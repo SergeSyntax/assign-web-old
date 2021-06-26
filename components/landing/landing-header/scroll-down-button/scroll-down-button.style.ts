@@ -1,6 +1,6 @@
 import { Button } from '@material-ui/core';
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 import { scrollMoveIn } from './scroll-move-in.keyframe';
 import { TouchScroll } from './touch-scroll.keyframe';
 

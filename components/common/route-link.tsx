@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
 import MaterialLink, { LinkProps } from '@material-ui/core/Link';
 

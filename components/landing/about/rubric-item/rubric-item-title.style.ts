@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const RubricTitle = styled.h3`
+export const RubricTitle = styled('h3')`
   ${({ theme }) => css`
     font-size: 2.1rem;
     font-weight: 700;

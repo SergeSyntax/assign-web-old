@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const FooterMenuWrapper = styled.footer`
+export const FooterMenuWrapper = styled('footer')`
   ${({ theme }) => css`
     display: flex;
     justify-content: space-evenly;

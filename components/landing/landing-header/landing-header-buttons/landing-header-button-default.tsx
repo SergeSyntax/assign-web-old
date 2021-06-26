@@ -1,5 +1,5 @@
 import { Button } from '@material-ui/core';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
 const DefaultButton = styled(Button)`
   border-radius: 10rem;
@@ -14,5 +14,7 @@ const DefaultButton = styled(Button)`
     transform: translateY(-0.1rem);
   }
 `;
+
+DefaultButton.defaultProps = { color: 'inherit' };
 
 export default DefaultButton;

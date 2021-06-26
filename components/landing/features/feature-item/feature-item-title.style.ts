@@ -1,6 +1,6 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const FeatureTitle = styled.h3`
+export const FeatureTitle = styled('h3')`
   text-align: center;
   font-size: 2rem;
   text-transform: capitalize;

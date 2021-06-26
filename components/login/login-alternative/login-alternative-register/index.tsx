@@ -1,8 +1,8 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 import React from 'react';
 import { LoginAlternativeLink } from '../login-alternative-link';
 
-const LoginAlternativeRegisterWrapper = styled.p`
+const LoginAlternativeRegisterWrapper = styled('p')`
   font-size: 1.5rem;
   margin: 1.5rem 0;
   text-align: center;

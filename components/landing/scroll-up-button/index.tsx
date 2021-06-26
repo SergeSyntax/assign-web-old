@@ -18,8 +18,8 @@ export const ScrollUpButton: React.FC = () => {
   return (
     <Zoom in={trigger}>
       <ScrollUpButtonFab
-        style={{ color: '#fff', background: 'rgb(32, 35, 42)' }}
-        color="primary"
+        // style={{ color: '#fff', background: 'rgb(32, 35, 42)' }}
+        color="default"
         onClick={() => window.scrollTo({ behavior: 'smooth', top: 0 })}
       >
         <IoIosArrowUp />

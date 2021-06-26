@@ -1,6 +1,6 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const DashboardLayout = styled.div`
+export const DashboardLayout = styled('div')`
   display: flex;
   flex-direction: column;
   justify-content: center;

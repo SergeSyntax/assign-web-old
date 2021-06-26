@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-export const FooterSignatureWrapper = styled.div`
+export const FooterSignatureWrapper = styled('div')`
   ${({ theme }) => css`
     background-color: #151515;
     display: flex;

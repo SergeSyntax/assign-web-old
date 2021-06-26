@@ -1,6 +1,6 @@
-import styled from '@emotion/styled';
+import { styled } from '@material-ui/core/styles';
 
-const LogoWrapper: React.FC = styled.a`
+const LogoWrapper: React.FC = styled('a')`
   display: inline-flex;
   align-items: center;
   font-size: 4rem;
