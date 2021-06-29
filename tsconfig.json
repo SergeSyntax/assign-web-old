@@ -73,6 +73,12 @@
     "skipLibCheck": true /* Skip type checking of declaration files. */,
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/store/common/types/action-creator.type",
+    "src/store/common/types/action-creator.type"
+  ],
   "exclude": ["node_modules"]
 }

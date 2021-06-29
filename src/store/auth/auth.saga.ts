@@ -1,7 +1,6 @@
-import { AxiosResponse } from 'axios';
 import { fork, call, takeLatest, put } from 'redux-saga/effects';
 import { authLoginRequest as userLoginRequest, authRegistrationRequest } from './auth.api';
-import { loginAction, authRegistrationAction, UserActionType, UserData } from './auth.type';
+import { LoginAction, RegistrationAction, UserActionType, UserData } from './auth.type';
 import Router from 'next/router';
 import { AlertActionType } from 'src/store/alert/alert.type';
 
@@ -18,7 +17,7 @@ function* authFlowFailure(err: Error) {
   yield put({ type: AlertActionType.ALERT_REQUEST, payload: err });
 }
 
-function* useLogin({ payload }: loginAction) {
+function* useLogin({ payload }: LoginAction) {
   try {
     const { data } = yield call(userLoginRequest, payload);
     yield call(authFlowSuccess, data);
@@ -27,9 +26,12 @@ function* useLogin({ payload }: loginAction) {
   }
 }
 
-function* createUser({ payload }: authRegistrationAction) {
+function* createUser({ payload }: RegistrationAction) {
   try {
-    const { data }: AxiosResponse<UserData> = yield call(authRegistrationRequest, payload);
+    const { data }: ReturnType<typeof authRegistrationRequest> = yield call(
+      authRegistrationRequest,
+      payload
+    );
 
     yield call(authFlowSuccess, data);
   } catch (err) {

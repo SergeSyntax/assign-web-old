@@ -4,13 +4,13 @@ import { Select as SelectMUI } from '@material-ui/core';
 import { FormHelperText } from './form-helper-text.style';
 import _ from 'lodash';
 
-export interface SelectValue {
+export interface SelectOptions {
   key: string;
   value: string;
 }
 
 interface PropsSelectField extends FieldProps {
-  values: SelectValue[];
+  values: SelectOptions[];
 }
 
 export const SelectField: React.FC<PropsSelectField> = props => {

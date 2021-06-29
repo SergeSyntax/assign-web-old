@@ -24,7 +24,14 @@ export const theme = responsiveFontSizes(
     components: {
       MuiBackdrop: {
         styleOverrides: {
-          root: { backgroundColor: 'rgba(9, 30, 66, 0.54)' },
+          root: { backgroundColor: 'transparent' },
+        },
+      },
+      MuiDialog: {
+        styleOverrides: {
+          container: {
+            backgroundColor: 'rgba(9, 30, 66, 0.54)',
+          },
         },
       },
     },

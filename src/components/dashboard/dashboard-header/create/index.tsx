@@ -1,30 +1,11 @@
-import { styled } from '@material-ui/core/styles';
-import { Menu, MenuItem } from '@material-ui/core';
+import { MenuItem } from '@material-ui/core';
 import React, { Fragment } from 'react';
 import { AiOutlineUsergroupAdd } from 'react-icons/ai';
 import { RiMailSendLine } from 'react-icons/ri';
-import { grey } from '@material-ui/core/colors';
-import useDropdown from 'src/components/common/dropdown.hook';
-import { CreateButton } from './create-button';
+import useDropdown from 'src/hooks/dropdown.hook';
+import { CreateButton } from './button';
 import CreateProject from './create-project';
-
-const CreateDropdown = styled(Menu)`
-  & .MuiPaper-root.MuiPopover-paper.MuiPopover-paper {
-    min-width: 22rem;
-    top: 6.2rem !important;
-  }
-  & .MuiMenuItem-root {
-    opacity: 0.9;
-    font-size: 1.68rem;
-    font-weight: 800;
-    color: ${grey['700']};
-    padding: 1rem 1.4rem;
-    svg {
-      font-size: 1.5em;
-      margin-right: 1.4rem;
-    }
-  }
-`;
+import { CreateMenu } from './menu.style';
 
 export const Create: React.FC = () => {
   const { dropdown, openDropdown, closeDropdown } = useDropdown(null);
@@ -33,7 +14,7 @@ export const Create: React.FC = () => {
     <Fragment>
       <CreateButton onClick={openDropdown} />
 
-      <CreateDropdown
+      <CreateMenu
         id="simple-menu"
         anchorEl={dropdown}
         keepMounted
@@ -46,7 +27,6 @@ export const Create: React.FC = () => {
       >
         <CreateProject onClick={closeDropdown} />
         <MenuItem>
-          {' '}
           <AiOutlineUsergroupAdd />
           New Team
         </MenuItem>
@@ -54,7 +34,7 @@ export const Create: React.FC = () => {
           <RiMailSendLine />
           New Chat
         </MenuItem>
-      </CreateDropdown>
+      </CreateMenu>
     </Fragment>
   );
 };

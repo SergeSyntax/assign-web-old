@@ -1,9 +1,12 @@
-export interface loginPayload {
+import { Action } from '../common/types/action.interface';
+import { State } from '../common/types/state.interface';
+
+export interface LoginPayload {
   email: string;
   password: string;
 }
 
-export interface authRegistrationPayload {
+export interface RegistrationPayload {
   email: string;
   password: string;
   name: string;
@@ -15,11 +18,8 @@ export interface UserData {
   email: string;
 }
 
-export interface UsersState {
-  loading: boolean;
-  error: string | null;
+export interface UsersState extends State<UserData> {
   auth: string | null;
-  data: UserData;
 }
 
 export enum UserActionType {
@@ -29,28 +29,8 @@ export enum UserActionType {
   AUTH_FAILURE = 'auth/failure',
 }
 
-export interface authRegistrationAction {
-  type: UserActionType.AUTH_REGISTRATION;
-  payload: authRegistrationPayload;
-}
-
-export interface loginAction {
-  type: UserActionType.AUTH_LOGIN;
-  payload: loginPayload;
-}
-
-export interface authSuccessAction {
-  type: UserActionType.AUTH_SUCCESS;
-  payload: UserData;
-}
-
-export interface authFailureAction {
-  type: UserActionType.AUTH_FAILURE;
-  payload: string;
-}
-
-export type UserAction =
-  | loginAction
-  | authSuccessAction
-  | authFailureAction
-  | authRegistrationAction;
+export type LoginAction = Action<UserActionType.AUTH_LOGIN, LoginPayload>;
+export type AuthSuccessAction = Action<UserActionType.AUTH_SUCCESS, UserData>;
+export type AuthFailureAction = Action<UserActionType.AUTH_FAILURE, string>;
+export type RegistrationAction = Action<UserActionType.AUTH_REGISTRATION, RegistrationPayload>;
+export type UserAction = LoginAction | AuthSuccessAction | AuthFailureAction | RegistrationAction;
